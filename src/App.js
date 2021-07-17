@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { IconButton } from "@material-ui/core";
 import { BrightnessLow, BrightnessHigh } from "@material-ui/icons";
-import JumboTron from "./JumboTron";
-import About from "./About";
-import ProjectSection from "./ProjectSection";
-import Contact from "./Contact";
-import Footer from "./Footer";
-import scrollReveal from "./scrollReveal";
+import JumboTron from "./components/JumboTron";
+import About from "./components/About";
+import ProjectSection from "./components/ProjectSection";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import scrollReveal from "./utils/scrollReveal";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 

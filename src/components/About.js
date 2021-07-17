@@ -1,5 +1,5 @@
-import profile from "./profile.jpg";
-import data from "./data";
+import profile from "../assets/profile.jpg";
+import data from "../utils/data";
 
 const About = () => {
   const { about, resume } = data;
