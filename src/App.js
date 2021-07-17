@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import { IconButton } from "@material-ui/core";
+import { BrightnessLow, BrightnessHigh } from "@material-ui/icons";
+import JumboTron from "./JumboTron";
+import About from "./About";
+import ProjectSection from "./ProjectSection";
+import Contact from "./Contact";
+import Footer from "./Footer";
+import scrollReveal from "./scrollReveal";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
-function App() {
+const App = () => {
+  useEffect(() => {
+    scrollReveal();
+  }, []);
+
+  const [darkMode, setDarkMode] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <span data-theme={darkMode ? "dark" : "light"}>
+      <div id="top">
+        <IconButton
+          color="primary"
+          className="darkSwitch"
+          aria-label="toggle-dark"
+          onClick={() => {
+            setDarkMode(!darkMode);
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          {darkMode ? (
+            <BrightnessHigh fontSize="large" />
+          ) : (
+            <BrightnessLow fontSize="large" />
+          )}
+        </IconButton>
+      </div>
+      <JumboTron />
+      <About />
+      <ProjectSection />
+      <Contact />
+      <Footer />
+    </span>
   );
-}
+};
 
 export default App;
