@@ -9,13 +9,15 @@ import Footer from "./components/Footer";
 import scrollReveal from "./utils/scrollReveal";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import { dark } from "@material-ui/core/styles/createPalette";
 
 const App = () => {
   useEffect(() => {
     scrollReveal();
   }, []);
 
-  const [darkMode, setDarkMode] = useState(false);
+  const darkValue = localStorage.getItem("DARK_MODE") || false;
+  const [darkMode, setDarkMode] = useState(darkValue);
 
   return (
     <span data-theme={darkMode ? "dark" : "light"}>
@@ -26,6 +28,7 @@ const App = () => {
           aria-label="toggle-dark"
           onClick={() => {
             setDarkMode(!darkMode);
+            localStorage.setItem("DARK_MODE", darkMode);
           }}
         >
           {darkMode ? (
