@@ -9,7 +9,6 @@ import Footer from "./components/Footer";
 import scrollReveal from "./utils/scrollReveal";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import { dark } from "@material-ui/core/styles/createPalette";
 
 const App = () => {
   useEffect(() => {
