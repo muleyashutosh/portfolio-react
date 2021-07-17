@@ -8,7 +8,7 @@ const data = {
     "When it comes to my work, I always leave no stone unturned. I believe I am a fast learner with high grasping abilities. It would be great working with you, Contact Me.",
   ],
   resume:
-    "https://drive.google.com/file/d/1KwTPUabEnJEivkBB0ExX1c4J_TZveisn/view?usp=sharing",
+    "https://drive.google.com/file/d/1tr5lNCYY1m6hKml8kZ_TI1OCwLuYFT75/view?usp=sharing",
   email: "muleyashutosh@gmail.com",
   socials: {
     twitter: "https://twitter.com/muley_ashu",
