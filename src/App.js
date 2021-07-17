@@ -15,8 +15,11 @@ const App = () => {
     scrollReveal();
   }, []);
 
-  const darkValue = localStorage.getItem("DARK_MODE") || false;
-  const [darkMode, setDarkMode] = useState(darkValue);
+  const darkValue =
+    localStorage.getItem("DARK_MODE") === null
+      ? false
+      : localStorage.getItem("DARK_MODE");
+  const [darkMode, setDarkMode] = useState(darkValue === "true" ? true : false);
 
   return (
     <span data-theme={darkMode ? "dark" : "light"}>
@@ -26,8 +29,10 @@ const App = () => {
           className="darkSwitch"
           aria-label="toggle-dark"
           onClick={() => {
-            setDarkMode(!darkMode);
-            localStorage.setItem("DARK_MODE", darkMode);
+            setDarkMode((prev) => {
+              localStorage.setItem("DARK_MODE", !prev);
+              return !prev;
+            });
           }}
         >
           {darkMode ? (
