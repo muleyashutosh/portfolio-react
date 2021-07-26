@@ -19,6 +19,7 @@
   --white-color: #1f1f1f;
   --dark-grey: #1d1d1d;
   --dark-blue-text: white;
+  background-color: var(--white-color);
 }
 
 html {
@@ -27,7 +28,7 @@ html {
 body {
   font-family: Montserrat, sans-serif;
   text-align: center;
-  background: var(--white-color);
+  /* background: var(--white-color); */
 }
 h1 {
   font-weight: 700;

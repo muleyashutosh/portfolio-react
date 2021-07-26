@@ -22,7 +22,7 @@ const App = () => {
   const [darkMode, setDarkMode] = useState(darkValue === "true" ? true : false);
 
   return (
-    <span data-theme={darkMode ? "dark" : "light"}>
+    <div data-theme={darkMode ? "dark" : "light"}>
       <div id="top">
         <IconButton
           color="primary"
@@ -47,7 +47,7 @@ const App = () => {
       <ProjectSection />
       <Contact />
       <Footer />
-    </span>
+    </div>
   );
 };
 
