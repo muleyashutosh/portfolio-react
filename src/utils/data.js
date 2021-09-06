@@ -42,9 +42,10 @@ const data = {
     {
       title: "E-Commerce Database System",
       description: [
-        "An App that detects the faces in a given photo.Used HTML, CSS, JavaScript to Create the Frontend. Used FLASK as a framework to connect python backend to a MySQL database.",
-        "Used Git to coordinate with the team members. Used Google's Material Design Components and fundamentals to create a beautiful UI.",
-        "Used a Face Detection API by Clarifai to get search results.",
+        "An App that detects the faces in a given photo.Used HTML, CSS, JavaScript to Create the Frontend templates.",
+        "Used FLASK with python backend for connecting to a MySQL database.",
+        "Used Git to coordinate with the team members.",
+        "Used Google's Material Design Components and fundamentals to create a beautiful UI.",
       ],
       liveUrl: "https://elcarto.xyz",
       sourceUrl: "https://github.com/muleyashutosh/e-commerce-system",
