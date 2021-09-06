@@ -46,7 +46,7 @@ const data = {
         "Used Git to coordinate with the team members. Used Google's Material Design Components and fundamentals to create a beautiful UI.",
         "Used a Face Detection API by Clarifai to get search results.",
       ],
-      liveUrl: "https://el-carto.herokuapp.com",
+      liveUrl: "https://elcarto.xyz",
       sourceUrl: "https://github.com/muleyashutosh/e-commerce-system",
       screenshot: project3,
     },
