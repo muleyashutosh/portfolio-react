@@ -1,8 +1,9 @@
 import profile from "../assets/profile.jpg";
 import data from "../utils/data";
+import resume from "../assets/resume.pdf";
 
 const About = () => {
-  const { about, resume } = data;
+  const { about } = data;
   return (
     <section id="about">
       <div className="container">
