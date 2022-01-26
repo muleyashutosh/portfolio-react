@@ -16,7 +16,7 @@ const App = () => {
   }, []);
 
   const darkValue =
-    localStorage.getItem("DARK_MODE") === null
+    !localStorage.getItem("DARK_MODE")
       ? false
       : localStorage.getItem("DARK_MODE");
   const [darkMode, setDarkMode] = useState(darkValue === "true" ? true : false);
