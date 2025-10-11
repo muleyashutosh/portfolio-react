@@ -2,7 +2,7 @@
   "name": "portfolio-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://muleyashutosh.github.io",
+  "homepage": "https://muleyashutosh.github.io/portfolio-react",
   "dependencies": {
     "@mui/material": "^5.14.20",
     "@mui/icons-material": "^5.14.19",
