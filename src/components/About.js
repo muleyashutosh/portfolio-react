@@ -1,6 +1,8 @@
 import profile from "../assets/profile.jpg";
 import data from "../utils/data";
-import resume from "../assets/resume.pdf";
+
+const resumeUrl =
+  "https://docs.google.com/document/d/1JdRTRu4G_GzR7kmx_nOznzewybcRnTZo/edit?usp=sharing&ouid=110232544566602709812&rtpof=true&sd=true";
 
 const About = () => {
   const { about } = data;
@@ -32,7 +34,7 @@ const About = () => {
                   target="_blank"
                   rel="noreferrer"
                   className="cta-btn cta-btn--resume"
-                  href={resume}
+                  href={resumeUrl}
                 >
                   View Resume
                 </a>
