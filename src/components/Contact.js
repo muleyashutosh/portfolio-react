@@ -5,16 +5,17 @@ const Contact = () => {
   return (
     <section id="contact">
       <div className="container">
-        <h2 className="section-title">Contact</h2>
+        <h2 className="section-title">Get In Touch</h2>
         <div className="contact-wrapper">
-          <p className="contact-wrapper__text">Send me a mail.</p>
+          <p className="contact-wrapper__text">
+            Have a project in mind or just want to say hi?<br />
+            My inbox is always open.
+          </p>
           <a
-            target="_blank"
-            className="cta-btn cta-btn--resume"
+            className="cta-btn cta-btn--contact"
             href={`mailto:${email}`}
-            rel="noreferrer"
           >
-            Contact Me
+            Say Hello
           </a>
         </div>
       </div>

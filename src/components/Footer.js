@@ -1,33 +1,31 @@
+import { KeyboardArrowUp, GitHub, LinkedIn } from "@mui/icons-material";
 import data from "../utils/data";
 
 const Footer = () => {
   const { socials } = data;
   return (
-    <footer className="footer navbar-static-bottom">
+    <footer className="footer">
       <div className="container">
-        <p
+        <button
           onClick={() => {
             window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
           }}
           className="back-to-top"
-          role="button"
+          aria-label="Back to top"
         >
-          <i className="fa fa-angle-up fa-2x" aria-hidden="true"></i>
-        </p>
+          <KeyboardArrowUp />
+        </button>
         <div className="social-links">
-          <a rel="noreferrer" href={socials.twitter} target="_blank">
-            <i className="fa fa-twitter fa-inverse"></i>
+          <a rel="noreferrer" href={socials.github} target="_blank" aria-label="GitHub">
+            <GitHub />
           </a>
-          <a rel="noreferrer" href={socials.codepen} target="_blank">
-            <i className="fa fa-codepen fa-inverse"></i>
-          </a>
-          <a rel="noreferrer" href={socials.linkedin} target="_blank">
-            <i className="fa fa-linkedin fa-inverse"></i>
-          </a>
-          <a rel="noreferrer" href={socials.github} target="_blank">
-            <i className="fa fa-github fa-inverse"></i>
+          <a rel="noreferrer" href={socials.linkedin} target="_blank" aria-label="LinkedIn">
+            <LinkedIn />
           </a>
         </div>
+        <p className="footer__text">
+          © {new Date().getFullYear()} Ashutosh Muley. Built with React.
+        </p>
       </div>
     </footer>
   );
