@@ -46,7 +46,7 @@ const JumboTron = () => {
               className="cta-btn cta-btn--hero"
               onClick={() => {
                 document
-                  .getElementById("projects")
+                  .getElementById("experience")
                   .scrollIntoView({ behavior: "smooth" });
               }}
             >
