@@ -13,11 +13,30 @@ const navLinks = [
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      
+      // Scroll spy logic
+      const sections = navLinks.map(link => link.href.substring(1));
+      const scrollPosition = window.scrollY + 150; // Offset for navbar height
+      
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = document.getElementById(sections[i]);
+        if (section && section.offsetTop <= scrollPosition) {
+          setActiveSection(sections[i]);
+          break;
+        }
+      }
+      
+      // If at the top, no section is active
+      if (window.scrollY < 100) {
+        setActiveSection("");
+      }
     };
+    
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -44,7 +63,7 @@ const Navbar = () => {
             <li key={link.name}>
               <a
                 href={link.href}
-                className="navbar__link"
+                className={`navbar__link ${activeSection === link.href.substring(1) ? "navbar__link--active" : ""}`}
                 onClick={(e) => handleNavClick(e, link.href)}
               >
                 {link.name}
@@ -69,7 +88,7 @@ const Navbar = () => {
               <li key={link.name}>
                 <a
                   href={link.href}
-                  className="navbar__mobile-link"
+                  className={`navbar__mobile-link ${activeSection === link.href.substring(1) ? "navbar__mobile-link--active" : ""}`}
                   onClick={(e) => handleNavClick(e, link.href)}
                 >
                   {link.name}

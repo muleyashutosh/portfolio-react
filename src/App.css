@@ -195,8 +195,13 @@ section {
   color: var(--primary-color);
 }
 
-.navbar__link:hover::after {
+.navbar__link:hover::after,
+.navbar__link--active::after {
   width: 100%;
+}
+
+.navbar__link--active {
+  color: var(--primary-color);
 }
 
 .navbar__mobile-toggle {
@@ -236,6 +241,11 @@ section {
   font-weight: 500;
   color: var(--dark-blue-text);
   border-bottom: 1px solid var(--glass-border);
+  transition: color 0.3s ease;
+}
+
+.navbar__mobile-link--active {
+  color: var(--primary-color);
 }
 
 @media (max-width: 768px) {
