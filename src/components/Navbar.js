@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 import { IconButton } from "@mui/material";
 import { Menu, Close } from "@mui/icons-material";
+import data from "../utils/data";
 
 const navLinks = [
   { name: "About", href: "#about" },
   { name: "Experience", href: "#experience" },
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
+  { name: "Resume", href: data.resume, external: true },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -61,13 +63,24 @@ const Navbar = () => {
         <ul className="navbar__menu">
           {navLinks.map((link) => (
             <li key={link.name}>
-              <a
-                href={link.href}
-                className={`navbar__link ${activeSection === link.href.substring(1) ? "navbar__link--active" : ""}`}
-                onClick={(e) => handleNavClick(e, link.href)}
-              >
-                {link.name}
-              </a>
+              {link.external ? (
+                <a
+                  href={link.href}
+                  className="navbar__link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {link.name}
+                </a>
+              ) : (
+                <a
+                  href={link.href}
+                  className={`navbar__link ${activeSection === link.href.substring(1) ? "navbar__link--active" : ""}`}
+                  onClick={(e) => handleNavClick(e, link.href)}
+                >
+                  {link.name}
+                </a>
+              )}
             </li>
           ))}
         </ul>
@@ -86,13 +99,25 @@ const Navbar = () => {
           <ul>
             {navLinks.map((link) => (
               <li key={link.name}>
-                <a
-                  href={link.href}
-                  className={`navbar__mobile-link ${activeSection === link.href.substring(1) ? "navbar__mobile-link--active" : ""}`}
-                  onClick={(e) => handleNavClick(e, link.href)}
-                >
-                  {link.name}
-                </a>
+                {link.external ? (
+                  <a
+                    href={link.href}
+                    className="navbar__mobile-link"
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.name}
+                  </a>
+                ) : (
+                  <a
+                    href={link.href}
+                    className={`navbar__mobile-link ${activeSection === link.href.substring(1) ? "navbar__mobile-link--active" : ""}`}
+                    onClick={(e) => handleNavClick(e, link.href)}
+                  >
+                    {link.name}
+                  </a>
+                )}
               </li>
             ))}
           </ul>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const JumboTron = () => {
-  const roles = ["Software Engineer", "Tech Enthusiast", "Music Lover"];
+  const roles = ["Senior Backend Engineer @ Sage", "Tech Enthusiast", "Music Lover"];
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);

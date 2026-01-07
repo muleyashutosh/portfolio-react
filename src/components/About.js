@@ -1,10 +1,10 @@
-import { LocationOn, Email } from "@mui/icons-material";
+import { LocationOn, Email, GitHub } from "@mui/icons-material";
 import Tilt from "react-parallax-tilt";
 import profile from "../assets/profile.jpg";
 import data from "../utils/data";
 
 const About = () => {
-  const { about, resume, email, hero } = data;
+  const { about, resume, email, hero, socials } = data;
 
   return (
     <section id="about">
@@ -26,7 +26,7 @@ const About = () => {
                   height="auto"
                   width="300px"
                   src={profile}
-                  alt="Profile"
+                  alt="Ashutosh Muley - Senior Engineer at Sage"
                 />
               </Tilt>
             </div>
@@ -46,6 +46,10 @@ const About = () => {
                 <a href={`mailto:${email}`} className="about-badge about-badge--link">
                   <Email fontSize="small" />
                   {email}
+                </a>
+                <a href={socials.github} target="_blank" rel="noreferrer" className="about-badge about-badge--link">
+                  <GitHub fontSize="small" />
+                  GitHub
                 </a>
               </div>
               <div className="about-wrapper__cta">

@@ -187,9 +187,9 @@ const data = {
     {
       title: "EasyShare",
       description: [
-        "A blockchain-based system for secure storage and seamless sharing of documents within a university setting.",
-        "Built with React, Node.js, and Hyperledger Fabric for absolute transparency and authenticity of document ownership.",
-        "Employed advanced cryptography techniques, resulting in 50% reduction in paperwork and manual tasks.",
+        "Reduced university paperwork by 50% with a blockchain-based document sharing system.",
+        "Built with React, Node.js, and Hyperledger Fabric ensuring tamper-proof document ownership.",
+        "Implemented advanced cryptography for secure storage and seamless sharing across departments.",
       ],
       liveUrl: "",
       sourceUrl: "https://github.com/muleyashutosh/miniature-octo-robot-frontend",
@@ -199,9 +199,9 @@ const data = {
     {
       title: "Smart-Brain App",
       description: [
-        "An App that detects the faces in a given photo.",
-        "Used React JS for the front-end, Node.js for the backend server which is connected to a PostgreSQL database for storing user information.",
-        "Used a Face Detection API by Clarifai to get search results.",
+        "Full-stack face detection app with user authentication and usage tracking.",
+        "Built with React frontend, Node.js/Express backend, and PostgreSQL for persistent user data.",
+        "Integrated Clarifai's AI-powered Face Detection API for accurate image analysis.",
       ],
       liveUrl: "https://muleyashutosh.github.io/smart-brain/",
       sourceUrl: "https://github.com/muleyashutosh/smart-brain",
@@ -210,10 +210,9 @@ const data = {
     {
       title: "E-Commerce Database System",
       description: [
-        "A full-stack e-commerce application with user authentication and product management.",
-        "Used FLASK with python backend for connecting to a MySQL database.",
-        "Used Git to coordinate with the team members.",
-        "Used Google's Material Design Components and fundamentals to create a beautiful UI.",
+        "Team-built e-commerce platform with secure authentication and full product lifecycle management.",
+        "Designed and implemented MySQL database schema with Flask/Python REST API backend.",
+        "Delivered polished UI using Google's Material Design system for intuitive shopping experience.",
       ],
       liveUrl: "",
       sourceUrl: "https://github.com/muleyashutosh/e-commerce-system",

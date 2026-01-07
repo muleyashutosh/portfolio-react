@@ -64,6 +64,21 @@ a:hover {
   transition: all 0.3s ease-in-out;
 }
 
+/* Accessibility - Focus indicators */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.cta-btn:focus-visible {
+  outline-offset: 3px;
+}
+
 /* ============================================
    SECTION STYLES
    ============================================ */
