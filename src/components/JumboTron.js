@@ -1,35 +1,20 @@
 import { useState, useEffect } from "react";
 
 const JumboTron = () => {
-  const roles = ["Senior Backend Engineer @ Sage", "Tech Enthusiast", "Music Lover"];
-  const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
+  const phrase = "Senior Backend Engineer at Sage";
   const [displayText, setDisplayText] = useState("");
-  const [isDeleting, setIsDeleting] = useState(false);
+  const [isComplete, setIsComplete] = useState(false);
 
   useEffect(() => {
-    const currentRole = roles[currentRoleIndex];
-    const typeSpeed = isDeleting ? 50 : 100;
-    const pauseTime = 2000;
-
-    const timeout = setTimeout(() => {
-      if (!isDeleting) {
-        if (displayText.length < currentRole.length) {
-          setDisplayText(currentRole.slice(0, displayText.length + 1));
-        } else {
-          setTimeout(() => setIsDeleting(true), pauseTime);
-        }
-      } else {
-        if (displayText.length > 0) {
-          setDisplayText(currentRole.slice(0, displayText.length - 1));
-        } else {
-          setIsDeleting(false);
-          setCurrentRoleIndex((prev) => (prev + 1) % roles.length);
-        }
-      }
-    }, typeSpeed);
-
-    return () => clearTimeout(timeout);
-  }, [displayText, isDeleting, currentRoleIndex, roles]);
+    if (displayText.length < phrase.length) {
+      const timeout = setTimeout(() => {
+        setDisplayText(phrase.slice(0, displayText.length + 1));
+      }, 100);
+      return () => clearTimeout(timeout);
+    } else {
+      setIsComplete(true);
+    }
+  }, [displayText, phrase]);
 
   return (
     <section id="hero">

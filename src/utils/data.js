@@ -32,35 +32,32 @@ const data = {
   experience: [
     {
       company: "Sage",
-      logo: "S",
-      totalDuration: "6 months",
+      subtitle: "Formerly Fyle",
+      logo: "sage",
+      totalDuration: "4+ years",
       roles: [
         {
           title: "Senior Engineer",
           duration: "January 2026 - Present",
           location: "Pune, Maharashtra, India",
+          era: "Sage",
           highlights: [],
         },
         {
           title: "Engineer",
           duration: "August 2025 - January 2026",
           location: "Pune, Maharashtra, India",
+          era: "Sage",
           highlights: [
             "Part of a dynamic team focused on developing and enhancing innovative solutions for financial automation",
             "Designing scalable backend systems and collaborating across teams to deliver robust features",
           ],
         },
-      ],
-    },
-    {
-      company: "Fyle",
-      logo: "F",
-      totalDuration: "3 years 11 months",
-      roles: [
         {
           title: "Member of Technical Staff III",
           duration: "July 2024 - August 2025",
           location: "Pune, Maharashtra, India",
+          era: "Fyle",
           highlights: [
             "Joined the Embedded Engineering team to support and develop white-labeled versions of Fyle for external partners",
             "Contributed to the successful MVP launch of expense management for one of the top banks in the US",
@@ -71,6 +68,7 @@ const data = {
           title: "Member of Technical Staff II",
           duration: "July 2023 - June 2024",
           location: "Pune, Maharashtra, India",
+          era: "Fyle",
           highlights: [
             "Led the 'Fix Broken Window Backend' initiative, reducing weekly 5xx errors by 82% and failed events by 53%",
             "Fixed multiple Dwolla service issues, saving 100+ hours of manual work",
@@ -82,6 +80,7 @@ const data = {
           title: "Member of Technical Staff I",
           duration: "April 2022 - June 2023",
           location: "Pune, Maharashtra, India",
+          era: "Fyle",
           highlights: [
             "Developed and launched MCC v1 for automated card transaction categorization",
             "Implemented core business logic for transactions across Visa, MasterCard, Amex, Diners Club",
@@ -93,43 +92,11 @@ const data = {
           title: "Engineering Intern",
           duration: "October 2021 - April 2022",
           location: "Pune, Maharashtra, India",
+          era: "Fyle",
           highlights: [
             "Increased test coverage from 68% to 98.5%, boosting code reliability",
             "Implemented GitHub Actions to track code coverage on every master merge",
             "Ensured comprehensive OpenAPI documentation for all APIs",
-          ],
-        },
-      ],
-    },
-    {
-      company: "Possibillion Technologies",
-      logo: "P",
-      totalDuration: "3 months",
-      roles: [
-        {
-          title: "Software Engineer Intern",
-          duration: "May 2021 - July 2021",
-          location: "Pune, Maharashtra, India",
-          highlights: [
-            "Developed the Backend of an OTT platform App using Node.js, Express, and MongoDB from scratch",
-            "Used Amazon Cognito, Google Firebase, JWTs for REST API Authentication",
-            "Implemented Digital Ocean S3 Spaces for Media and Object Storage",
-          ],
-        },
-      ],
-    },
-    {
-      company: "English Summary",
-      logo: "E",
-      totalDuration: "7 months",
-      roles: [
-        {
-          title: "Web Developer",
-          duration: "November 2020 - May 2021",
-          location: "Pune, Maharashtra, India",
-          highlights: [
-            "Created keyword research and English language tools using PHP, HTML, CSS, JS",
-            "Built tools including Citation Generator, Article Rewriter, Plagiarism Checker, and more",
           ],
         },
       ],

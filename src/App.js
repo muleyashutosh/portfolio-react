@@ -28,6 +28,11 @@ const App = () => {
   // Default to dark mode if no preference is stored
   const [darkMode, setDarkMode] = useState(darkValue === null ? true : darkValue === "true");
 
+  // Sync theme to document element for components that need it
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", darkMode ? "dark" : "light");
+  }, [darkMode]);
+
   return (
     <ThemeProvider theme={theme}>
       <div data-theme={darkMode ? "dark" : "light"}>
